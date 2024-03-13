@@ -1,0 +1,186 @@
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* MY CSS */
+
+:root {
+  --primary-400: hsl(263, 55%, 52%);
+  --primary-600: hsl(217, 19%, 35%);
+  --primary-800: hsl(219, 29%, 14%);
+  --neutral-100: hsl(0, 0%, 100%);
+  --neutral-200: hsl(210, 46%, 95%);
+  --neutral-300: hsl(0, 0%, 81%);
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4.375rem 1.5rem;
+  background-color: var(--neutral-200);
+}
+
+main {
+  display: grid;
+  row-gap: 1.5rem;
+  max-width: 69.375rem;
+}
+
+section {
+  border-radius: 0.5rem;
+  padding: 1.625rem 2rem 2rem 2rem;
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+}
+
+p {
+  font-weight: 500;
+}
+
+figure {
+  display: flex;
+  gap: 1.0625rem;
+  align-items: center;
+  margin-bottom: 1.125rem;
+}
+
+img {
+  border-radius: 100%;
+  max-width: 1.75rem;
+}
+
+figcaption {
+  line-height: 100%;
+}
+
+.name {
+  font-size: 0.8125rem;
+  margin-bottom: 0.25rem;
+}
+
+.profession {
+  font-size: 0.6875rem;
+  opacity: 0.5;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.review {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+
+.primary-400 {
+  background-color: var(--primary-400);
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 85% 0;
+}
+
+.primary-400 img {
+  outline: 2px solid #a775f1;
+}
+
+.primary-800 img {
+  outline: 2px solid #733fc8;
+}
+
+.primary-600 {
+  background-color: var(--primary-600);
+}
+
+.neutral-100 {
+  background-color: var(--neutral-100);
+  color: var(--primary-600);
+}
+
+.primary-800 {
+  background-color: var(--primary-800);
+}
+
+.dark {
+  color: var(--neutral-100);
+}
+
+@media (min-width: 48rem) {
+  body {
+    justify-content: center;
+  }
+
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "dc dc jw kw"
+      "jh pa pa kw";
+    column-gap: 1.875rem;
+  }
+
+  #dc {
+    grid-area: dc;
+  }
+
+  #jw {
+    grid-area: jw;
+  }
+
+  #kw {
+    grid-area: kw;
+  }
+  #jh {
+    grid-area: jh;
+  }
+
+  #pa {
+    grid-area: pa;
+  }
+}
