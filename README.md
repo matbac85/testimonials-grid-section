@@ -2,7 +2,7 @@
 
 ### Check out the Challenge
 
-You can find my solution to this challenge [here](https://matbac85.github.io/TESTIMONIALS_GRID_SECTION/). 
+You can find my solution to this challenge [here](https://matbac85.github.io/testimonials_grid_section/)
 
 ## The challenge
 
